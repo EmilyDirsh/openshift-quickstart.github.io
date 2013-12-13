@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>OpenShift Community Cartridges</title>
+  <title>OpenShift Community Quickstarts</title>
   <style>
   html {
   background: black;
@@ -128,9 +128,17 @@
 	  font-size:14px;
 	  margin-bottom:5px;
   }
+  .repository .contributors {
+	  margin-bottom:5px;
+  }
   .repository .contributors a img {
   	border-radius:5px;
 	margin-right:5px;
+  }
+  .repository .github-stats {
+	  text-align:right;
+	  font-size:14px;
+	  margin-bottom:5px;
   }
   </style>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -164,8 +172,8 @@
 					<div class='contributors'> \
 					 \
 					</div> \
-					<div class='github-buttons'> \
-					 \
+					<div class='github-stats'> \
+					 Watchers: "+repository.watchers_count+" / Stars: "+repository.stargazers_count+" / Forks: "+repository.forks_count+"\
 					</div> \
 				</div> \
 			";
