@@ -162,7 +162,7 @@
 	<script type='text/javascript'>
 	var access_token = "95a748be43c06f29f462b8666e30b87f68f6b919";
 	var github_user = "openshift-quickstart";
-	$.getJSON('https://api.github.com/users/'+github_user+'/repos?per_page=100&access_token='+access_token, function(data){
+	$.getJSON('https://api.github.com/users/'+github_user+'/repos?per_page=100', function(data){
 		var repos = [];
 		$.each(data,function(key,repository){
 			var html = " \
@@ -188,7 +188,7 @@
 			
 		});
 		$.each(data,function(key,repository){
-			$.getJSON('https://api.github.com/repos/'+repository.full_name+'/contributors?access_token='+access_token, function(contributors){
+			$.getJSON('https://api.github.com/repos/'+repository.full_name+'/contributors', function(contributors){
 				$.each(contributors, function(key,contributor){
 					$(".container #"+repository.name+" .contributors").append("<a href='"+contributor.html_url+"'><img src='"+contributor.avatar_url+"' width='35' height='35'/></a>");
 				});
@@ -197,7 +197,7 @@
 		
 	});
 	function parse_quickstart_json(repository_name, repository_full_name) {
-		$.getJSON('https://api.github.com/repos/'+repository_full_name+'/contents/.openshift/quickstart.json?access_token='+access_token,function(data){
+		$.getJSON('https://api.github.com/repos/'+repository_full_name+'/contents/.openshift/quickstart.json',function(data){
 			json = $.parseJSON($.base64.decode(data.content));
 			var cartridges = Array();
 			$.each(json.cartridges,function(k,v){
