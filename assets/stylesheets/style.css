@@ -1,0 +1,141 @@
+/* Import fonts */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,800,300);
+
+/* Basic page styles */
+body {
+  margin: 0; padding: 0;
+  width: 100%;
+  background: #f3f3f3;
+  color: #444;
+  font-family: OpenSans, sans-serif;
+}
+
+h1 {
+  font-weight: 300;
+  font-size: 1.85em;
+  border-bottom: 1px solid white;
+}
+h2 {
+  font-weight: 400;
+  font-size: 1.5em;
+}
+h3, h4, h5, h6 {
+  font-weight: 600;
+}
+
+a {
+  color: #069;
+  text-decoration: none;
+}
+a:hover {
+  color: #ea0011;
+  text-decoration: underline;
+}
+a:visited {
+  color: #038;
+}
+
+pre {
+  background: #444;
+  color: white;
+  padding: 10px 15px;
+}
+code {
+  line-height: 125%;
+}
+ 
+
+/* Header */
+body > header {
+  background-color: black;
+  background-image: url('../images/dark_rain.png');
+  background-image: url('../images/rocket.svg'), url('../images/dark_rain.png');
+  background-repeat: no-repeat, repeat;
+  background-position: 90% 30%, center;
+  background-size: 20%, auto;
+  color: #d0d0d0;
+  width: 100%;
+  padding: 50px 10%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body > header h1{
+  margin: 0 0 10px; 
+  padding: 0;
+  border: none;
+}
+body > header h1 img{
+  max-width: 80%;
+}
+body > header h2 {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 10px 0 0 80px;
+  padding: 0;
+  line-height: 125%;
+}
+body > header nav a {
+  display: inline-block;
+  background: #444;
+  background: rgba(90, 90, 90, 0.8);
+  color: white;
+  text-decoration: none;
+  text-shadow: 1px 1px 0 black;
+  font-size: 18px;
+  padding: 10px 15px;
+  margin: 20px 0 2px 80px;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+  -webkit-transition: background .3s,
+                      padding .3s,
+                      margin .3s;
+  transition: background .3s,
+              padding .3s,
+              margin .3s;
+}
+body > header nav a:hover {
+  color: white;
+  text-decoration: none;
+  background: #666;
+  background: rgba(90, 90, 90, 1);
+  padding: 12px 17px;
+  margin: 18px 0 0 78px;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+  -webkit-transition: background .3s,
+                      padding .3s,
+                      margin .3s;
+  transition: background .3s,
+              padding .3s,
+              margin .3s;
+}
+
+/* Content */
+section {
+  margin: 50px 10%;
+  padding-left: 80px;
+}
+
+
+/* Small screens */
+@media (max-width: 768px) {
+  body > header {
+    padding: 30px 7%;
+  }
+  body > header h2,
+  body > header nav a {
+    margin-left: 12%;
+  }
+  section {
+    margin: 30px 7%;
+    padding-left: 10%;
+  }
+
+  body > header nav a:hover {
+    margin-left: 12%;
+    margin-left: -webkit-calc(12% - 2px);
+    margin-left: calc(12% - 2px);
+  }
+}
+
